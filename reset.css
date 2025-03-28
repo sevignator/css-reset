@@ -4,20 +4,36 @@
   box-sizing: border-box;
 }
 
-:root {
-  interpolate-size: allow-keywords;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
+* {
   margin: 0;
 }
 
-img {
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  text-wrap: pretty;
+
+  @media (prefers-reduced-motion: no-preference) {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input {
-  font-family: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
