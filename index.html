@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS reset</title>
     <link rel="stylesheet" href="./reset.css" />
+    <script src="./index.js" defer></script>
+    <style>
+      [data-mode="dark"] {
+        background-color: black;
+        color: white;
+      }
+      #mode-btn {
+        position: fixed;
+        top: 6px;
+        right: 6px;
+      }
+    </style>
   </head>
   <body>
     <h1>CSS reset</h1>
+
+    <button id="mode-btn">Toggle <span id="mode-next"></span> mode</button>
 
     <form>
       <label for="firstName">First name</label>
@@ -15,6 +29,8 @@
 
       <label for="lastName">Last name</label>
       <input id="lastName" type="text" />
+
+      <button>Click me</button>
 
       <p>Etiam at enim a tortor placerat dapibus. Donec euismod nisi id urna auctor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas sapien velit, lacinia at accumsan at, volutpat nec quam. Vivamus erat justo, posuere ac nunc vitae, posuere pulvinar ipsum. Aliquam tempor enim vel velit porta posuere. Fusce at erat ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed purus leo, rutrum et facilisis nec, accumsan ullamcorper diam.</p>
 

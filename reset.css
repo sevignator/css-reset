@@ -36,4 +36,31 @@ button,
 textarea,
 select {
   font: inherit;
+  border-style: solid;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Focus indicator */
+:focus-visible {
+  isolation: isolate;
+  z-index: 1;
+  outline: solid 2px black;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px white;
+  border-radius: 1px;
+}
+
+/* Fallback for browsers that don't support :focus-visible */
+@supports not selector(:focus-visible) {
+  :focus {
+    isolation: isolate;
+    z-index: 1;
+    outline: solid 2px black;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px white;
+    border-radius: 1px;
+  }
 }
